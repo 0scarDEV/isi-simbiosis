@@ -268,6 +268,11 @@ enlazar a los términos de esta sección, pero no los definirá de nuevo.
 
 | Término | Definición en Proyecto Simbiosis | Fuente |
 | --- | --- | --- |
+| Alcance | Establece los límites de lo que se va a desarrollar: qué objetivos, necesidades y características se incluyen y cuáles quedan fuera. Ofrece un marco compartido entre cliente y equipo de desarrollo y sirve como base para la planificación de requisitos, plazos y recursos. | Documento de Visión y Alcance
+| Módulo funcional | Bloque de alto nivel que agrupa funcionalidades relacionadas del sistema. | Documento de Visión y Alcance
+| Entregable | Los entregables son los productos finales del proyecto. No son requisitos de usuario ni funcionales, aunque pueden contener información de contexto relacionada. | Documento de Visión y Alcance
+| Restricción | Estas restricciones marcan límites de tiempo, presupuesto y recursos. Son contexto de planificación y no requisitos funcionales o de usuario. | Documento de Visión y Alcance
+| Receta adaptada | Recetas adecuadas al perfil. | Acta de Captura de Requisitos Generales. - 3. Recetas y gestión de la dieta
 
 ## 10. Modelos de análisis
 
