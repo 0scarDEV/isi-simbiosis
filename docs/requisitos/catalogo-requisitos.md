@@ -279,6 +279,11 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | ID | Categoría y atributo | Requisito no funcional | Ámbito (Global/Local) | UR/FR relacionados | Método de comprobación | Estado |
 | --- | --- | --- | --- | --- | --- | --- |
 | NFR-07 |NFR-Q (Eficiencia; Escalabilidad; Mantenibilidad) |La plataforma mantendrá los objetivos de capacidad y rendimiento definidos para la primera versión sin intervención manual del personal de la organización.| G | -  | Prueba de carga automatizada con 100 usuarios concurrentes y 10 operaciones/s durante 30 min; comprobar mediante registros de monitorización, ausencia de intervención manual. | - |
+| NFR-08 | NFR-I (Interfaz de usuario; Idioma) | La interfaz gráfica tendrá versión en castellano y gallego en la primera versión, incluyendo el cambio de idioma en la interfaz aplicable a todos los elementos de la interfaz.  | G | - | - | - |
+| NFR-09 | NFR-Q (Fiabilidad y Disponibilidad) | Tras un incidente grave, la plataforma deberá recuperar sus funciones principales en un máximo de cuatro horas desde la declaración del incidente. | G | - | - | - |
+| NFR-10 | NFR-Q (Integridad de los datos) | Ante un incidente grave, la pérdida de información no podrá superar las 24 horas anteriores al incidente. | G | - | - | - |
+| NFR-11 | NFR-Q (Integridad) | Se realizará una copia de seguridad diaria de la información de salud y recetas. | G | - | - | - |
+| NFR-12 |NFR-Q (Seguridad) |Los datos de salud de un paciente serán privados, podrán ser vistos por el propio paciente. | G | -  | Prueba de seguridad de acceso a datos. | - |
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
