@@ -284,6 +284,7 @@ FR-017 se conserva para no perder el identificador histórico, pero su estado es
 | NFR-10 | NFR-Q (Integridad de los datos) | Ante un incidente grave, la pérdida de información no podrá superar las 24 horas anteriores al incidente. | G | - | - | - |
 | NFR-11 | NFR-Q (Integridad) | Se realizará una copia de seguridad diaria de la información de salud y recetas. | G | - | - | - |
 | NFR-12 |NFR-Q (Seguridad) |Los datos de salud de un paciente serán privados, podrán ser vistos por el propio paciente. | G | -  | Prueba de seguridad de acceso a datos. | - |
+| NFR-13 | NFR-I (Compatibilidad y portabilidad) | Se podrá acceder a la plataforma desde cualquier dispositivo con acceso a internet, teniendo mayor facilidad el acceso con el móvil | G | - | - | - |
 
 Categorías y atributos: 
 1) Requisitos de calidad (NFR-Q): Rendimiento, Usabilidad, Seguridad, Fiabilidad, Disponibilidad, Modificabilidad, Portabilidad, Eficiencia, Escalabilidad, Verificabilidad / Testabilidad, Robustez, Seguridad funcional (safety), Integridad, Reusabilidad, Instalabilidad.
