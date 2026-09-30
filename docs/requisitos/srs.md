@@ -272,6 +272,11 @@ enlazar a los términos de esta sección, pero no los definirá de nuevo.
 | Módulo funcional | Bloque de alto nivel que agrupa funcionalidades relacionadas del sistema. | Documento de Visión y Alcance
 | Entregable | Los entregables son los productos finales del proyecto. No son requisitos de usuario ni funcionales, aunque pueden contener información de contexto relacionada. | Documento de Visión y Alcance
 | Restricción | Estas restricciones marcan límites de tiempo, presupuesto y recursos. Son contexto de planificación y no requisitos funcionales o de usuario. | Documento de Visión y Alcance
+| Pacientes con EII | Usuarios principales del sistema, que buscan recetas personalizadas para mejorar su dieta y controlar los síntomas de su enfermedad. | Documento de Visión y Alcance
+| Cuidadores | Familiares o profesionales que asisten a los pacientes en la gestión de su dieta, actuando como usuarios secundarios que buscan y administran recetas en nombre de los pacientes. | Documento de Visión y Alcance
+| Nutricionistas y médicos | Profesionales de la salud que contribuyen con recetas especializadas y validan la calidad de las recetas disponibles en la plataforma. | Documento de Visión y Alcance
+|Representantes de la organización sin ánimo de lucro | Partes interesadas clave que impulsan la creación del proyecto y velan por su alineación con la misión de mejorar la vida de los pacientes con EII. | Documento de Visión y Alcance
+| Coordinador | Usuario responsable de supervisar la actividad en la plataforma. Gestiona reportes de contenido inadecuado, aplica reglas de uso, apoya el correcto funcionamiento de la comunidad y gestiona cuentas de usuario, incluida la aprobación, suspensión y eliminación de cuentas. La adscripción organizativa del coordinador se decidirá en la fase de despliegue. | Documento de Visión y Alcance
 | Receta adaptada | Recetas adecuadas al perfil. | Acta de Captura de Requisitos Generales. - 3. Recetas y gestión de la dieta
 
 ## 10. Modelos de análisis
