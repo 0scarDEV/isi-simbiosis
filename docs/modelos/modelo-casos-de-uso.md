@@ -223,45 +223,123 @@ Los apartados 6.1 y 6.2 corresponden a las descripciones detalladas de UC-05 y U
 
 ### 6.1 Descripción detallada UC-05 — Actualizar perfil
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-05 · Actualizar perfil
 
-**Objetivo:** [Explica qué resultado pretende obtener el participante.]
+**Objetivo:** Actualizar los datos personales y preferencias de un usuario registrado.
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado.
 
-**Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+**Precondiciones:** 
+- El usuario ya tiene una cuenta activa.
+- El usuario ya tiene iniciada su sesión.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita actualizar su propio perfil.
 
-**Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+**Escenario principal de éxito:**
+1. El usuario con sesión iniciada solicita actualizar su perfil personal.
+2. El sistema muestra al usuario su perfil, distinguiendo los valores editables de los fijos.
+3. El usuario modifica los campos que quiere actualizar.
+4. La persona solicita guardar los cambios.
+5. El sistema comprueba que los datos obligatorios no están vacíos.
+6. El sistema confirma que las reglas de formato del teléfono se cumplen.
+7. El sistema guarda los cambios y confirma que el perfil se ha actualizado.
 
 **Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
 
+5.a. El usuario intenta dejar un campo obligatorio vacío o con espacios.
+1. El usuario modifica un campo obligatorio y lo deja en blanco.
+2. El sistema identifica el campo que es obligatorio.
+3. El sistema explica al usuario qué debe corregirse.
+4. El sistema conserva los valores introducidos en los campos.
+4. El flujo de eventos vuelve al paso 5 para corregir los errores.
+
+6.a. El usuario introduce un número de teléfono que no cumple con el formato.
+1. El usuario modifica el campo del número de teléfono con un formato no válido.
+2. El sistema explica al usuario qué debe corregirse y el formato correcto.
+3. El sistema conserva los valores introducidos en los campos.
+3. El flujo de eventos vuelve al paso 5 para corregir los errores.
+
+*.a. El usuario cancela antes de guardar.
+1. El sistema descarta los damcbios de la edicación.
+2. El perfil conserva los valores anteriores.
+3. El flujo de eventos termina.
+
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
 
+Tras actualizar el perfil de usuario con éxito:
+- El usuario solicita el guardado de cambios.
+- El sistema confirma que el perfil se ha actualizado.
+
+Si la persona cancela antes de guardar.
+- El sistema descarta los cambios de esa edición.
+- El sistema conserva los valores anteriores.
+
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+- Catálogo canónico de requisitos, UR-03 y FR-019:	Actualización de información personal y preferencias; exclusión del alias y del correo electrónico.
+- Acta general de captura, apartado 1.1:	Datos obligatorios y opcionales de la cuenta.
+- Acta de UR-01, apartado 2.1:	Teléfono obligatorio y admisión de prefijos internacionales.
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
+- ¿Cómo se debe mostrar que el perfil se ha actualizado?
 
 ### 6.2 Descripción detallada UC-21 — Buscar recetas
 
-**Identificador y nombre del caso de uso:** [Indica el caso.]
+**Identificador y nombre del caso de uso:** UC-21 · Buscar recetas 
 
 **Objetivo:** [Explica qué resultado pretende obtener el participante.]
 
-**Participantes:** [Indica el actor principal y los actores de apoyo, si los hay.]
+**Participantes:** Usuario registrado, como actor principal.
 
 **Precondiciones:** [Indica qué se da por cumplido al comenzar. Las comprobaciones que realiza el sistema pertenecen al flujo.]
+- El usuario ha sido registrado y está activo.
+- El usuario tiene la sesión iniciada.
 
-**Inicio:** [Indica qué acción o suceso inicia el caso.]
+**Inicio:** El usuario solicita realizar una búsqueda de una receta.
 
 **Escenario principal de éxito:** [Describe la secuencia entre los participantes y el sistema.]
+1. El usuario solicita realizar una búsqueda.
+2. El sistema muestra al usuario el formulario de búsqueda.
+3. El usuario, si lo desea, selecciona los ingredientes mínimos que debe contener la receta.
+4. El usuario, si lo desea, selecciona los ingredientes que desea excluir de los resultados.
+5. El usuario, si lo desea, introduce un texto para realizar la búsqueda.
+6. El usuario solicita realizar la búsqueda.
+7. El sistema confirma que los criterios de búsqueda son compatibles.
+8. El sistema muestra al usuario las recetas publicadas y validadas que coincidan con todos los criterios ordenados por fecha de publicación descendente.
+9. El usuario selecciona una receta.
+10. El sistema muestra el detalle de la receta seleccionada al usuario.
+11. El flujo de trabajo finaliza con éxito.
 
 **Extensiones (flujos alternativos):** [Vincula cada variación a un paso. Indica cómo continúa o termina.]
+7.a. El usuario no selecciona ningún criterio.
+1. El sistema solicita al usuario al menos un criterio.
+2. El sistema conserva la búsqueda.
+3. El flujo vuelve al paso 2.
+
+7.b. El usuario selecciona el mismo ingrediente en los que desea encontrar y excluir.
+1. El sistema muestra al usuario un mensaje señalando el conflicto.
+2. El flujo vuelve al paso 2.
+
+8.a. El usuario desea modificar los criterios de búsqueda.
+1. El usuario solicita al sistema volver al formulario de búsqueda de recetas.
+2. El flujo vuelve al paso 2.
+
+10.a. El usuario desea visualizar otros resultados.
+1. El usuario solicita al sistema volver a la vista general de resultados.
+2. El flujo vuelve al paso 8.
 
 **Postcondiciones:** [Indica qué queda establecido con éxito y qué se conserva o cambia si el caso termina sin éxito o se cancela. Una consulta no requiere modificar datos para alcanzar su objetivo.]
+En caso de que existan resultados que cumplan con todos los criterios:
+- El sistema muestra al usuario cada receta que coincide con los criterios de la búsqueda.
+
+En caso de que no existan resultados que cumplan con todos los criterios:
+- El sistema no muestra
+
+La consulta falla.
 
 **Reglas y NFR pertinentes:** [Remite a los requisitos y actas que condicionan el comportamiento.]
+| [Catálogo canónico de requisitos](../requisitos/catalogo-requisitos.md), UR-08; FR-085, FR-086, FR-087, FR-089, FR-099, FR-102 y FR-119 | Texto, ingredientes, exclusiones, vistas previas, orden por fecha, ayuda sin resultados y acceso a búsqueda avanzada. |
+| Mismo catálogo, FR-056, FR-066 y FR-192 | Datos de una receta, insignia de validación e identidad pública mediante alias. |
+| [Plan de E2](../planificacion/plan-iteracion-e2.md), apartado 4.4 | Recorrido de búsqueda, resultados y consulta del detalle. |
 
 **Preguntas abiertas:** [Registra solo las cuestiones necesarias que las fuentes no resuelvan. Si no hay preguntas para el alcance descrito, indícalo.]
 
@@ -280,3 +358,5 @@ UC-08 sigue retirado. Su código no se reutiliza. UC-22 a UC-30 no forman parte 
 El modelo acumulado contiene dos vistas, siete actores y veinticinco casos de uso vigentes. Los casos de E1 conservan sus identificadores. Las siguientes iteraciones mantendrán los elementos que conserven el mismo objetivo.
 
 Git conserva las revisiones registradas del modelo y sus imágenes. La evaluación de cada iteración identificará el commit de su estado revisado, conforme a la [guía de modelos](README.md). Cerrar una iteración no declara automáticamente una línea base.
+
+Se incorpora las decripciones de casos de uso UC-05 y UC-21
